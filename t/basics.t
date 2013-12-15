@@ -25,7 +25,7 @@ use_ok 'MooseX::Role::Defaultable';
 
 my $foo = Foo->new(bam => 54321);
 
-ok $foo->is_default('non-existent'), 'is_default returns false for non-existent attributes';
+ok $foo->is_default('non-existent'), 'is_default returns true for non-existent attributes';
 
 ok $foo->is_default('bar'), 'is_default verifies attributes with constant defaults';
 ok $foo->is_default('baz'), 'is_default verifies attributes with coderef defaults';
